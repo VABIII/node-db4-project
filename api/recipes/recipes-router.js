@@ -3,8 +3,8 @@ const Recipe = require('./recipes-model')
 
 
 router.get('/:recipe_id', (req, res, next) => {
-    const { id } = req.params
-    Recipe.getRecipeById(id)
+    const { recipe_id } = req.params
+    Recipe.getRecipeById(recipe_id)
         .then(resource => {
             res.status(200).json(resource)
         })
