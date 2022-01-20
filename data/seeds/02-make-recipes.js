@@ -5,12 +5,12 @@ const recipes = [
 ]
 
 const ingredients = [
-    {ingredient_name : 'Broccoli', ingredient_unit: 'lbs'},
-    {ingredient_name : 'Pesto', ingredient_unit: 'lbs'},
-    {ingredient_name : 'Pasta', ingredient_unit: 'lbs'},
-    {ingredient_name : 'Lemon', ingredient_unit: 'slices'},
-    {ingredient_name : 'Chicken', ingredient_unit: 'kilos'},
-    {ingredient_name : 'Salmon', ingredient_unit: 'grams'}
+    {ingredient_name: 'Broccoli', ingredient_unit: 'lbs'},
+    {ingredient_name: 'Pesto', ingredient_unit: 'lbs'},
+    {ingredient_name: 'Pasta', ingredient_unit: 'lbs'},
+    {ingredient_name: 'Lemon', ingredient_unit: 'slices'},
+    {ingredient_name: 'Chicken', ingredient_unit: 'kilos'},
+    {ingredient_name: 'Salmon', ingredient_unit: 'grams'}
 ]
 
 const step_ingredients = [
@@ -41,8 +41,7 @@ const steps = [
 ]
 
 
-
-exports.seed = async function(knex) {
+exports.seed = async function (knex) {
     await knex('recipes').insert(recipes)
     await knex('ingredients').insert(ingredients)
     await knex('steps').insert(steps)
